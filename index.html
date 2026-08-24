@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DennCode - TikTok Downloader</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fab fa-tiktok"></i>
+                <h1> Downloader TikTok</h1>
+            </div>
+            <p class="subtitle">Tanpa watermark</p>
+        </header>
+
+        <main class="card">
+            <div class="input-group">
+                <label for="urlInput"><i class="fas fa-link"></i> Link TikTok</label>
+                <input
+                    type="url"
+                    id="urlInput"
+                    placeholder="https://www.tiktok.com/@username/video/123456789"
+                    required
+                />
+            </div>
+
+            <div class="toggle-group">
+                <span class="toggle-label">Pilih tipe unduhan:</span>
+                <div class="toggle-buttons">
+                    <button class="toggle-btn active" data-type="video">
+                        <i class="fas fa-video"></i> Video (MP4)
+                    </button>
+                    <button class="toggle-btn" data-type="audio">
+                        <i class="fas fa-music"></i> Audio (MP3)
+                    </button>
+                </div>
+            </div>
+
+            <button id="downloadBtn" class="download-btn">
+                <i class="fas fa-download"></i> <span id="btnText">Unduh Sekarang</span>
+                <div class="spinner hidden" id="spinner"></div>
+            </button>
+
+            <div id="message" class="message hidden"></div>
+
+            <div id="resultContainer" class="result-container hidden">
+                <div class="result-header">
+                    <h3><i class="fas fa-check-circle" style="color: #25f4ee;"></i> Siap diunduh!</h3>
+                </div>
+                <div class="video-wrapper" id="videoWrapper">
+                    <!-- Preview video/audio akan muncul di sini -->
+                </div>
+                <div class="result-actions">
+                    <button id="downloadBtnFile" class="result-download-btn">
+                        <i class="fas fa-arrow-down"></i> Simpan File
+                    </button>
+                    <button id="resetBtn" class="reset-btn">
+                        <i class="fas fa-undo"></i> Baru
+                    </button>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <p><i class="fas fa-globe"></i> Simple Downloader Video Tiktok & Audio By DennCode</p>
+                <p class="hint">Masukkan link dan pilih format</p>
+            </div>
+        </main>
+
+        <!-- Thanks To-->
+        <div class="thanks-footer">
+            <p>
+                <i class="fas fa-heart" style="color: #fe2c55;"></i>
+                Thanks to <br> Allah SWT. (God) <br> DennCode  (Developer) <br> Zyy (Partner) <br> Sandi (Friend)  <br> Deepseek Ai (Fix Issue) <br>  TikWm.com (Penyedia Api) 
+            </p>
+
+
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
